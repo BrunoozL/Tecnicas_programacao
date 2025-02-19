@@ -3,18 +3,43 @@
 	<head>
 		<title>Formulário</title>
 		<meta charset="UTF-8">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				line_height: 1.2;
+				
+			}
+		
+			.div-card_contato {
+				border: 1px #000 solid;
+				padding: 20px;
+				margin: 20px;
+			}
+			
+			textarea {
+				height: 100px;
+				width: 220px;
+			}
+		
+		</style>
 	</head>
 	<body>
+	<div class="div-card_contato">
 		<h1>Contato</h1>
 		<br>
 		<!-- O método GET mostra as informações que foram inseridas na URL. Obs: essa é a unica diferença do método GET e POST -->
 		<form action="obter_dados.php" method="get">
 			<label for="nome">Nome:</label>
-			<input type="text" name="nome" id="nome">
+			<input type="text" name="nome" id="nome" required>
 			<br><br>
 			
 			<label for="email">Email:</label>
-			<input type="email" name="email" id="email">
+			<input type="email" name="email" id="email" required>
+			<br><br>
+			
+			<label for="senha">Senha:<label>
+			<input type="password" name="senha" id="senha" required>
 			<br><br>
 			
 			<label for="profissao">Profissão</label>
@@ -28,18 +53,18 @@
 			<br><br>
 			
 			<label for="sexo">Sexo:</label>
-			<input type="radio" name="sexo"
+			<input type="radio" name="sexo" value="M">
 			<label>Masculino</label>
-			<input type="radio" name="sexo"
+			<input type="radio" name="sexo" value="F">
 			<label>Feminino</label>
 			<br><br>
 			
 			<label for="lazer">Lazer: </label><br>
-			<input type="checkbox">
+			<input type="checkbox" name="lazer1" value="Jogar">
 			<label>Jogar</label>
-			<input type="checkbox">
+			<input type="checkbox" name="lazer2" value="Ler">
 			<label>Ler</label>
-			<input type="checkbox">
+			<input type="checkbox" name="lazer3" value="Viajar">
 			<label>Viajar</label>
 			<br><br>
 			
@@ -48,5 +73,6 @@
 			
 			<input type="submit" value="Enviar">
 		</form>
+	</div>
 	</body>
 </html>
