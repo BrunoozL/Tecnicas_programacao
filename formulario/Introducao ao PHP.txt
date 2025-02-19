@@ -1,0 +1,27 @@
+PHP - Personal Home Page
+
+    -> Entradas <form> por HTML (PHP não existe entrada de dados, por isso utilizamos o HTML)
+    -> Operadores aritméticos (+, -, *, /, ++, --, %)
+    -> Operadores relacionais (<, >, <=, >=, ==, !=)
+    -> Operadores lógicos (&&, ||, !)
+    -> PHP não é executada, ela é interpretada
+    -> os códigos rodam do lado do servidor, ou seja, quando for rodar um código PHP, temos antes que conectar 
+    em um servidor que está na Internet.
+    -> Para rodarmos o código sem precisar de um servidor, utilizamos o LOCALHOST, através do pacote XAMPP
+    -> XAMPP é um pacote com os principais servidores de código aberto do mercado
+    -> Para usar o PHP, abrimos por meio do <?php e fechamos com ?php>
+
+VARIÁVEIS
+
+    -> Para declarar uma variável, utilizamos ($)
+        Exemplos: $preco_compra, $preco_venda...
+
+    -> o PHP é CASE SENSITIVE, ou seja, em uma variável, as letras em letras maíusculas são diferentes das letras mínusculas
+        Exemplos: $preco_compra é diferente de $Preco_compra
+
+    -> o PHP é fracamente tipada, ou seja, não precisa especificar o tipo de uma variável.
+    -> Tipos de variáveis: string, int, double, boolean, char, array...
+        Exemplos aplicados: 
+                            $nome = "Bruno"; -> STRING
+                            $idade = 19; -> INT
+                            $situacao = true; - BOOLEAN
