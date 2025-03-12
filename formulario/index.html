@@ -3,33 +3,14 @@
 	<head>
 		<title>Formulário</title>
 		<meta charset="UTF-8">
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				line_height: 1.2;
-				
-			}
-		
-			.div-card_contato {
-				border: 1px #000 solid;
-				padding: 20px;
-				margin: 20px;
-			}
-			
-			textarea {
-				height: 100px;
-				width: 220px;
-			}
-		
-		</style>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 	<div class="div-card_contato">
 		<h1>Contato</h1>
 		<br>
 		<!-- O método GET mostra as informações que foram inseridas na URL. Obs: essa é a unica diferença do método GET e POST -->
-		<form action="obter_dados.php" method="get">
+		<form action="php/obter_dados.php" method="GET">
 			<label for="nome">Nome:</label>
 			<input type="text" name="nome" id="nome" required>
 			<br><br>
@@ -60,11 +41,11 @@
 			<br><br>
 			
 			<label for="lazer">Lazer: </label><br>
-			<input type="checkbox" name="lazer1" value="Jogar">
+			<input type="checkbox" name="lazer[]" value="Jogar">
 			<label>Jogar</label>
-			<input type="checkbox" name="lazer2" value="Ler">
+			<input type="checkbox" name="lazer[]" value="Ler">
 			<label>Ler</label>
-			<input type="checkbox" name="lazer3" value="Viajar">
+			<input type="checkbox" name="lazer[]" value="Viajar">
 			<label>Viajar</label>
 			<br><br>
 			
