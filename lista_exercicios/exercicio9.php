@@ -4,7 +4,7 @@ Crie um vetor de cores e use-o para exibir quadrados coloridos (<div style="widt
 -->
 
 <?php
-    $vetor = array("#00BFFF", "#00FA9A", "#FFFF00", "#FF8C00", "#FF0000");
+$vetor = array("#00BFFF", "#00FA9A", "#FFFF00", "#FF8C00", "#FF0000");
 ?>
 
 <!DOCTYPE html>

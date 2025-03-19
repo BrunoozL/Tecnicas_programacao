@@ -6,12 +6,10 @@ Crie um vetor com 4 números e copie cada valor manualmente para um segundo veto
 <?php
 $vetor1 = array(13, 27, 24, 91);
 $vetor2 = array(0, 0, 0, 0);
-$x = 0;
 
-foreach($vetor1 as $dados)
+for($x = 0; $x < 4; $x++)
 {
     $vetor2[$x] = $vetor1[$x];
-    $x++;
 }
 
 echo "<b>Primeiro vetor:</b> ";
