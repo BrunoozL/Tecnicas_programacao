@@ -1,23 +1,6 @@
 <?php
-    class Cliente
-    {
-        public function __construct
-        (
-            private string $nome = "",
-            private string $cpf = "",
-            private string $celular = ""
-        ){}
-
-        public function getNome()
-        {
-            return $this->nome;
-        }
-
-        public function setNome($nomeCliente)
-        {
-            $this->nome = $nomeCliente;
-        }
-    }
+    // Arquivo "ClienteClass.php" é requirido para buscar a classe Cliente.
+    require_once "ClienteClass.php";
 
     // Cliente 1
     $cliente1 = new Cliente("Bruno", "123456789", "(14)99999999");
