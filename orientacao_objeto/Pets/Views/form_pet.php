@@ -42,14 +42,14 @@ if($_POST)
         $cor = $_POST["cor"];
     }
 
-    if($_POST["raca"] !== 0)
+    if($_POST["raca"] == 0)
     {
-        $raca = $_POST["raca"];
+        $msg[3] = "Selecione uma das opções";
+        $erro = true;
     }
     else
     {
-        $msg[3] = "Selecione uma das opções sugeridas";
-        $erro = true;
+        $raca = $_POST["raca"];
     }
 
     if(!$erro)
@@ -96,10 +96,10 @@ if($_POST)
                 <label>Raça: </label>
                 <select name="raca" tabindex="4">
                     <option value="0">Escolha a raça</option>
-                    <option value="<?php if($_POST["raca"] == 1){echo $raca;} ?>">Pitbull</option>
-                    <option value="<?php if($_POST["raca"] == 2){echo $raca;} ?>">Lhasa</option>
-                    <option value="<?php if($_POST["raca"] == 3){echo $raca;} ?>">Yorkshare</option>
-                    <option value="<?php if($_POST["raca"] == 4){echo $raca;} ?>">Indefinido</option>
+                    <option value="1" <?php if (isset($_POST['raca']) && $_POST['raca'] == 1) echo 'selected'; ?>>Pitbull</option>
+                    <option value="2" <?php if (isset($_POST['raca']) && $_POST['raca'] == 2) echo 'selected'; ?>>Lhasa</option>
+                    <option value="3" <?php if (isset($_POST['raca']) && $_POST['raca'] == 3) echo 'selected'; ?>>Yorkshare</option>
+                    <option value="4" <?php if (isset($_POST['raca']) && $_POST['raca'] == 4) echo 'selected'; ?>>Indefinido</option>
                 </select>
                 <div class="erro"><?php echo $msg[3]; ?></div>
             </div>
