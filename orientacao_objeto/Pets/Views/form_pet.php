@@ -65,12 +65,12 @@ if($_POST)
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Pets</title>
-        <link rel="stylesheet" href="../styles/form_pet.css">
+        <title>Cadastrar Pets</title>
+        <link rel="stylesheet" href="../styles/forms.css">
     </head>
 
     <body>
-        <form class="form_pet" action="#" method="POST">
+        <form class="forms" action="#" method="POST">
             <h1>Pet</h1>
             <br><br>
             <div class="div_inputs">
