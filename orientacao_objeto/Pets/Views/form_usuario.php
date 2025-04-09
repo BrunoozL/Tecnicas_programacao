@@ -1,8 +1,8 @@
 <?php
 
+require_once "../Models/Conexao.php";
 require_once "../Models/UsuarioClass.php";
 require_once "../Models/UsuarioDAO.php";
-require_once "../Models/Conexao.php";
 
 $msg = array("", "", "", "", "", "");
 $erro = false;
