@@ -10,6 +10,7 @@ $nome = "";
 $celular = "";
 $email = "";
 $senha = "";
+$confirmar_senha = "";
 
 
 if($_POST)
@@ -19,17 +20,29 @@ if($_POST)
         $msg[0] = "Preencha o campo";
         $erro = true;
     }
+    else
+    {
+        $nome = $_POST["nome"];
+    }
 
     if(empty($_POST["celular"]))
     {
         $msg[1] = "Preencha o campo";
         $erro = true;
     }
+    else
+    {
+        $celular = $_POST["celular"];
+    } 
 
     if(empty($_POST["email"]))
     {
         $msg[2] = "Preencha o campo";
         $erro = true;
+    }
+    else
+    {
+        $email = $_POST["email"];
     }
 
     if(empty($_POST["senha"]))
@@ -37,11 +50,19 @@ if($_POST)
         $msg[3] = "Preencha o campo";
         $erro = true;
     }
+    else
+    {
+        $senha = $_POST["senha"];
+    } 
 
     if(empty($_POST["confirmar_senha"]))
     {
         $msg[4] = "Confirme a senha";
         $erro = true;
+    }
+    else
+    {
+        $confirmar_senha = $_POST["confirmar_senha"];
     }
 
     if($_POST["senha"] != "" && $_POST["confirmar_senha"] != "")
@@ -55,7 +76,7 @@ if($_POST)
 
     if(!$erro)
     {
-        $usuario = new Usuario($_POST["nome"], $_POST["celular"], $_POST["email"], md5($_POST["senha"]));
+        $usuario = new Usuario(0 ,$_POST["nome"], $_POST["celular"], $_POST["email"], md5($_POST["senha"]));
 
         $usuarioDAO = new UsuarioDAO();
         $retorno = $usuarioDAO->insert($usuario);
@@ -83,22 +104,22 @@ if($_POST)
                 <br>
 
                 <label>Celular: </label>
-                <input type="text" name="celular" tabindex="2">
+                <input type="text" name="celular" tabindex="2" value="<?php echo $celular; ?>">
                 <div class="erro"><?php echo $msg[1]; ?></div>
                 <br>
 
                 <label>Email: </label>
-                <input type="text" name="email" tabindex="3">
+                <input type="text" name="email" tabindex="3" value="<?php echo $email; ?>">
                 <div class="erro"><?php echo $msg[2]; ?></div>
                 <br>
 
                 <label>Senha: </label>
-                <input type="password" name="senha" tabindex="4">
+                <input type="password" name="senha" tabindex="4" value="<?php echo $senha; ?>">
                 <div class="erro"><?php echo $msg[3]; echo $msg[5]; ?></div>
                 <br>
 
                 <label>Confirmar Senha: </label>
-                <input type="password" name="confirmar_senha" tabindex="5">
+                <input type="password" name="confirmar_senha" tabindex="5" value="<?php echo $confirmar_senha; ?>">
                 <div class="erro"><?php echo $msg[4]; echo $msg[5]; ?></div>
                 <br>
             </div>
