@@ -1,5 +1,6 @@
 <?php
 
+require_once "../Models/UsuarioClass.php";
 require_once "../DAO/Conexao.php";
 require_once "../Models/PetClass.php";
 require_once "../DAO/PetDAO.php";
@@ -56,7 +57,8 @@ if($_POST)
 
     if(!$erro)
     {
-        $pet = new Pet($_POST["nome"], $_POST["idade"], $_POST["cor"], $_POST["raca"]);
+        $usuario = new Usuario(1);
+        $pet = new Pet($_POST["nome"], $_POST["idade"], $_POST["cor"], $_POST["raca"], $usuario);
 
         $petDAO = new PetDAO();
         $retorno = $petDAO->insert($pet);

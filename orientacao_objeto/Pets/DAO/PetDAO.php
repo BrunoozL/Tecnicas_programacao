@@ -16,7 +16,7 @@
             $stm->bindValue(2, $pet->getIdade());
             $stm->bindValue(3, $pet->getCor());
             $stm->bindValue(4, $pet->getRaca());
-            $stm->bindValue(5, 1);
+            $stm->bindValue(5, $pet->getUsuario()->getIdUsuario());
             $stm->execute();
 
             $this->db = null;

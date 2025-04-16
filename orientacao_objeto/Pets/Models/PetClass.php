@@ -8,7 +8,8 @@ class Pet
         private string $nome = "",
         private string $idade = "",
         private string $cor = "",
-        private string $raca = ""
+        private string $raca = "",
+        private $usuario = null
     ){}
 
     //========== Métodos GET ==========
@@ -33,7 +34,12 @@ class Pet
         return $this->raca;
     }
 
-    
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+
     //========== Métodos SET ==========
 
     public function setNome($nomePet)
