@@ -49,6 +49,10 @@ if($_POST)
         $msg[3] = "Selecione uma das opções";
         $erro = true;
     }
+    else
+    {
+        $raca = $_POST["raca"];
+    }
 
     if(!$erro)
     {

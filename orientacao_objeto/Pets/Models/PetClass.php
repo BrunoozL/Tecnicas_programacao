@@ -6,7 +6,7 @@ class Pet
 {
     public function __construct(
         private string $nome = "",
-        private int $idade = 0,
+        private string $idade = "",
         private string $cor = "",
         private string $raca = ""
     ){}
@@ -32,8 +32,8 @@ class Pet
     {
         return $this->raca;
     }
-    //----------------------------------------------
 
+    
     //========== Métodos SET ==========
 
     public function setNome($nomePet)
@@ -55,8 +55,6 @@ class Pet
     {
         $this->raca = $racaPet;
     }
-
-    //----------------------------------------------
 }
 
 ?>
