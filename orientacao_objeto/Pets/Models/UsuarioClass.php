@@ -1,12 +1,12 @@
 <?php
     class Usuario
     {
-        public function __construct
-        (private int $id_usuario = 0,
-         private string $nome = "",
-         private string $celular = "",
-         private string $email = "", 
-         private string $senha = ""
+        public function __construct(
+            private int $id_usuario = 0,
+            private string $nome = "",
+            private string $celular = "",
+            private string $email = "", 
+            private string $senha = ""
         ){}
 
 

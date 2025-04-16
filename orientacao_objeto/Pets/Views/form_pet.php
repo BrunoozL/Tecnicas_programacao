@@ -1,6 +1,8 @@
 <?php
 
-require "../Models/PetClass.php";
+require_once "../DAO/Conexao.php";
+require_once "../Models/PetClass.php";
+require_once "../DAO/PetDAO.php";
 
 $msg = array("", "", "", "");
 $erro = false;
@@ -52,11 +54,9 @@ if($_POST)
     {
         $pet = new Pet($_POST["nome"], $_POST["idade"], $_POST["cor"], $_POST["raca"]);
 
-        //Mostrando os dados
-        echo "Nome: {$pet->getNome()}<br>";
-        echo "Idade: {$pet->getIdade()}<br>";
-        echo "Cor: {$pet->getCor()}<br>";
-        echo "Raça: {$pet->getRaca()}<br><br>";
+        $petDAO = new PetDAO();
+        $retorno = $petDAO->insert($pet);
+        echo $retorno;
     }
 }
 ?>

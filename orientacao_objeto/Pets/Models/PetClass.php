@@ -4,8 +4,7 @@
 
 class Pet
 {
-    public function __construct
-    (
+    public function __construct(
         private string $nome = "",
         private int $idade = 0,
         private string $cor = "",

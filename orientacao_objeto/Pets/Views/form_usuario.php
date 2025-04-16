@@ -1,11 +1,16 @@
 <?php
 
-require_once "../Models/Conexao.php";
+require_once "../DAO/Conexao.php";
 require_once "../Models/UsuarioClass.php";
-require_once "../Models/UsuarioDAO.php";
+require_once "../DAO/UsuarioDAO.php";
 
 $msg = array("", "", "", "", "", "");
 $erro = false;
+$nome = "";
+$celular = "";
+$email = "";
+$senha = "";
+
 
 if($_POST)
 {
@@ -73,7 +78,7 @@ if($_POST)
             <br><br>
             <div class="div_inputs">
                 <label>Nome: </label>
-                <input type="text" name="nome" tabindex="1">
+                <input type="text" name="nome" tabindex="1" value="<?php echo $nome; ?>">
                 <div class="erro"><?php echo $msg[0]; ?></div>
                 <br>
 
@@ -89,12 +94,12 @@ if($_POST)
 
                 <label>Senha: </label>
                 <input type="password" name="senha" tabindex="4">
-                <div class="erro"><?php echo $msg[3]; ?></div>
+                <div class="erro"><?php echo $msg[3]; echo $msg[5]; ?></div>
                 <br>
 
                 <label>Confirmar Senha: </label>
                 <input type="password" name="confirmar_senha" tabindex="5">
-                <div class="erro"><?php echo $msg[4]; ?></div>
+                <div class="erro"><?php echo $msg[4]; echo $msg[5]; ?></div>
                 <br>
             </div>
 
